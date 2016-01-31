@@ -1,0 +1,101 @@
+\documentclass[letterpaper, 11pt]{nycv}
+
+\usepackage[english]{babel}
+\pagestyle{fancy} 
+
+\newmdenv[topline=false, rightline=false, bottomline=false,%
+  linewidth=1pt, linecolor=gray, innerleftmargin=4pt, leftmargin= 2pt,%
+  skipabove=8pt, skipbelow=8pt]{leftbar}
+
+% fonts
+\setmainfont{Proxima Nova}
+\newfontface\thin{Proxima Nova Thin}
+\newfontface\graphik{Graphik}[
+    BoldFont={Graphik Medium}, 
+    ItalicFont={Graphik Light Italic}
+]
+\newfontface\icon{octicons}
+\newfontface\serif{Dala Floda}[
+    BoldFont={Dala Floda Bold}, 
+    BoldItalicFont={Dala Floda Bold Italic}
+]
+
+\setlist[enumerate,1]{leftmargin=10pt, label={}}
+
+\begin{document}
+
+% header
+\header{Your Name}{Job Title}{Location}
+
+% skills
+\section*{Skills}
+\newlist{skills}{description}{1}
+\setlist[skills]{itemjoin=\hspace{12pt}, format=\textbf\normalfont, leftmargin=!, labelwidth=\widthof{\bfseries xxxaliquam}}
+\begin{skills}
+  \item[aliquam]Lorem, ipsum, dolor, sit amet
+  \item[mauris]Aliquam tincidunt mauris eu risus
+  \item[risus]Egestas augue, eu vulputate magna eros eu erat
+  \item[dolor]Nam nulla quam, gravida non, commodo a, sodales sit amet
+  \item[dapibus]Fusce pellentesque suscipit nibh
+  \item[ornare]Ut aliquam sollicitudin leo
+\end{skills}
+
+% experience
+\section*{Experience}
+
+\datedsubsection{Company Name}{Job Title}{Start Date}{End Date}
+Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit
+\begin{leftbar}
+\begin{enumerate}
+  \item Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
+  \item Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna.
+\end{enumerate}
+\end{leftbar}
+
+\noindent
+Nulla sed leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra
+\vspace{6pt}\\
+Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+\vspace{6pt}\\
+Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+\vspace{6pt}\\
+Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.
+
+\datedsubsection{Company Name}{Job Title}{Start Date}{End Date}
+Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna.
+
+% education
+\section*{Education}
+\datedsubsection{University}{Major}{Start Date}{End Date}
+\begin{leftbar}
+\begin{enumerate}
+  \item Nunc dignissim risus id metus.
+  \item Nulla sed leo. Class aptent taciti sociosqu ad litora torquent
+  \item \textbf{Coursework} 
+  \item Lorem ipsum dolor, sit amet, consectetuer adipiscing elit, Donec odio
+\end{enumerate}
+\end{leftbar}
+
+
+
+% footer
+\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt}
+\cfoot{
+  {\icon} (555) 555 5555 \hfill
+  {\icon} \href{mailto:}{lorem@ipsum.com}\hfill
+  {\icon} \href{}{github.com/loremipsum}
+}
+
+
+\end{document}
+
+
+
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
